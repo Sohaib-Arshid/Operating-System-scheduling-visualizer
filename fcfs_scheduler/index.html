@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCFS Cloud Video Rendering Task Scheduler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="title">☁️ FCFS Cloud Video Rendering Scheduler</h1>
+            <p class="subtitle">Operating System Project - CPU Scheduling Simulation</p>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container main-container">
+        
+        <!-- Configuration Section -->
+        <section class="config-section card">
+            <h2 class="section-title">⚙️ Configuration</h2>
+            
+            <div class="config-grid">
+                <!-- Number of VMs -->
+                <div class="input-group">
+                    <label for="numVMs">Number of Virtual Machines (2-3)</label>
+                    <input type="number" id="numVMs" min="2" max="3" value="3">
+                </div>
+                
+                <!-- Number of Tasks -->
+                <div class="input-group">
+                    <label for="numTasks">Number of Tasks (5-6)</label>
+                    <input type="number" id="numTasks" min="5" max="6" value="6">
+                </div>
+            </div>
+            
+            <button class="btn btn-primary" onclick="generateTaskInputs()">Generate Task Inputs</button>
+        </section>
+
+        <!-- Task Input Section -->
+        <section id="taskInputSection" class="task-input-section card" style="display: none;">
+            <h2 class="section-title">📋 Task Configuration</h2>
+            <p class="info-text">Configure video rendering tasks with arrival time and burst time (CPU time required)</p>
+            
+            <div id="taskInputs" class="task-inputs-grid"></div>
+            
+            <div class="button-group">
+                <button class="btn btn-primary" onclick="runScheduler()">🚀 Run FCFS Scheduler</button>
+                <button class="btn btn-secondary" onclick="loadSampleData()">📝 Load Sample Data</button>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="resultsSection" class="results-section" style="display: none;">
+            
+            <!-- Performance Metrics -->
+            <div class="card metrics-card">
+                <h2 class="section-title">📊 Performance Metrics</h2>
+                <div class="metrics-grid" id="metricsDisplay"></div>
+            </div>
+
+            <!-- Gantt Chart -->
+            <div class="card">
+                <h2 class="section-title">📈 Gantt Chart - Task Execution Timeline</h2>
+                <div id="ganttChart" class="gantt-chart"></div>
+            </div>
+
+            <!-- VM Utilization -->
+            <div class="card">
+                <h2 class="section-title">💻 Virtual Machine Utilization</h2>
+                <div id="vmUtilization" class="vm-utilization"></div>
+            </div>
+
+            <!-- Task Execution Table -->
+            <div class="card">
+                <h2 class="section-title">📄 Task Execution Details</h2>
+                <div id="executionTable" class="table-container"></div>
+            </div>
+
+            <!-- OS Concepts -->
+            <div class="card concepts-card">
+                <h2 class="section-title">🎓 OS Concepts Demonstrated</h2>
+                <ul class="concepts-list">
+                    <li>✓ FCFS (First Come First Served) Scheduling Algorithm</li>
+                    <li>✓ Multi-processor Task Assignment</li>
+                    <li>✓ Resource Utilization Analysis</li>
+                    <li>✓ Performance Metric Calculation (Makespan, Waiting Time)</li>
+                </ul>
+            </div>
+
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Operating Systems Project - FCFS Scheduling Algorithm</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
