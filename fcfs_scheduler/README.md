@@ -268,7 +268,7 @@ This is an educational project created for Operating Systems coursework.
 
 ---
 
-**Created by:** [Sohaib Arshid]  
+**Created by:** Sohaib Arshid
 **Course:** Operating Systems  
 **Topic:** CPU Scheduling - FCFS Algorithm  
 **Date:** 12 feb 2026
